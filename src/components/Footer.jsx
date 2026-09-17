@@ -1,8 +1,9 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
+import { GitHubIcon, LinkedInIcon } from './Icons';
 
 export const Footer = () => {
-  const { footer } = portfolioData;
+  const { footer, personal } = portfolioData;
 
   return (
     <footer className="site-footer" role="contentinfo">
@@ -12,6 +13,32 @@ export const Footer = () => {
         </div>
         <div className="footer-name">{footer.name}</div>
         <div className="footer-role">{footer.role}</div>
+
+        <div className="footer-social-links">
+          <a
+            href={personal.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+            aria-label="GitHub Profile"
+            title="GitHub: c22ug152cap073"
+          >
+            <GitHubIcon size={16} />
+            <span>GitHub (c22ug152cap073)</span>
+          </a>
+          <a
+            href={personal.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+            aria-label="LinkedIn Profile"
+            title="LinkedIn Profile"
+          >
+            <LinkedInIcon size={16} />
+            <span>LinkedIn</span>
+          </a>
+        </div>
+
         <div className="footer-mantra" aria-label="Mantra">
           <span>CODE</span>
           <span className="footer-dot" aria-hidden="true">•</span>

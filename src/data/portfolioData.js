@@ -9,6 +9,8 @@ export const portfolioData = {
     email: "summiayasummiaya2004@gmail.com",
     linkedin: "linkedin.com/in/summiaya-1-25210a299",
     linkedinUrl: "https://www.linkedin.com/in/summiaya-1-25210a299",
+    github: "github.com/c22ug152cap073",
+    githubUrl: "https://github.com/c22ug152cap073",
     heroHeading: "Building Modern Web Experiences with Code & Creativity.",
     heroHighlight: "Full Stack Developer",
     heroSummary:
@@ -287,7 +289,9 @@ export const DepartmentGrid = ({ departments }) => {
       phone: "6369682663",
       location: "Hosur, Tamil Nadu, India",
       linkedin: "linkedin.com/in/summiaya-1-25210a299",
-      linkedinUrl: "https://www.linkedin.com/in/summiaya-1-25210a299"
+      linkedinUrl: "https://www.linkedin.com/in/summiaya-1-25210a299",
+      github: "github.com/c22ug152cap073",
+      githubUrl: "https://github.com/c22ug152cap073"
     }
   },
 

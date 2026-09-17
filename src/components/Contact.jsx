@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Mail, Phone, MapPin, Linkedin, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { LinkedInIcon, GitHubIcon } from './Icons';
 
 const CONTACT_ITEMS = [
   {
@@ -22,10 +23,16 @@ const CONTACT_ITEMS = [
     href: null,
   },
   {
-    icon: Linkedin,
+    icon: LinkedInIcon,
     label: 'LINKEDIN',
     key: 'linkedin',
     href: (v, data) => data.linkedinUrl,
+  },
+  {
+    icon: GitHubIcon,
+    label: 'GITHUB',
+    key: 'github',
+    href: (v, data) => data.githubUrl,
   },
 ];
 
@@ -77,8 +84,8 @@ export const Contact = () => {
               </div>
               <div className="cc-label">{label}</div>
               {link ? (
-                <a href={link} className="cc-value" target={key === 'linkedin' ? '_blank' : undefined}
-                  rel={key === 'linkedin' ? 'noopener noreferrer' : undefined}>
+                <a href={link} className="cc-value" target={(key === 'linkedin' || key === 'github') ? '_blank' : undefined}
+                  rel={(key === 'linkedin' || key === 'github') ? 'noopener noreferrer' : undefined}>
                   {value}
                 </a>
               ) : (
@@ -108,8 +115,18 @@ export const Contact = () => {
           className="contact-linkedin-btn"
           aria-label="Visit LinkedIn profile"
         >
-          <Linkedin size={18} aria-hidden="true" />
+          <LinkedInIcon size={18} aria-hidden="true" />
           <span>LinkedIn Profile</span>
+        </a>
+        <a
+          href={personal.githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-github-btn"
+          aria-label="Visit GitHub profile"
+        >
+          <GitHubIcon size={18} aria-hidden="true" />
+          <span>GitHub: c22ug152cap073</span>
         </a>
       </div>
     </section>

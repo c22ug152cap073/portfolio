@@ -45,6 +45,7 @@ export const TerminalModal = ({ isOpen, onClose, onAction, onThemeChange }) => {
   brochure          - Launch Adhiyamaan College Brochure explorer
   voice             - Start interactive AI Voice Tour
   resume            - Open interactive resume modal
+  github            - Open developer GitHub profile (c22ug152cap073)
   contact           - View developer contact coordinates
   theme <name>      - Switch theme (cyber, emerald, sunset, titanium)
   clear             - Clear terminal screen
@@ -115,11 +116,22 @@ Tools    : Git, GitHub, VS Code, Postman, Vite`
         }, 400);
         break;
 
+      case 'github':
+        newHistory.push({
+          type: 'output',
+          text: `GitHub Profile: https://github.com/c22ug152cap073
+Username: c22ug152cap073
+Opening profile in new tab...`
+        });
+        window.open('https://github.com/c22ug152cap073', '_blank');
+        break;
+
       case 'contact':
         newHistory.push({
           type: 'output',
           text: `Email: summiayasummiaya2004@gmail.com
 Phone: +91 6369682663
+GitHub: https://github.com/c22ug152cap073 (c22ug152cap073)
 LinkedIn: https://www.linkedin.com/in/summiaya-1-25210a299
 Location: Hosur, Tamil Nadu, India`
         });

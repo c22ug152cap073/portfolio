@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight, FileText, Terminal } from 'lucide-react';
+import { GitHubIcon } from './Icons';
 import { portfolioData } from '../data/portfolioData';
 import { soundManager } from '../utils/voiceEngine';
 
@@ -140,6 +141,16 @@ export const Hero = ({ onOpenResume, onOpenSandbox }) => {
               <FileText size={15} aria-hidden="true" />
               <span>Resume</span>
             </button>
+            <a
+              href={portfolioData.personal.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost hero-github-cta"
+              aria-label="GitHub profile"
+            >
+              <GitHubIcon size={15} aria-hidden="true" />
+              <span>GitHub</span>
+            </a>
           </div>
 
           <div className="hero-quick-stack">

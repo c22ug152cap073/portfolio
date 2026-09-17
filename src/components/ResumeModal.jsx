@@ -36,7 +36,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
               <h1 className="resume-sheet-title">{personal.name}</h1>
               <div className="resume-sheet-role">{personal.title}</div>
               <div className="resume-sheet-contact">
-                {personal.location} &bull; {personal.phone} &bull; {personal.email} &bull; {personal.linkedin}
+                {personal.location} &bull; {personal.phone} &bull; {personal.email} &bull; {personal.github} &bull; {personal.linkedin}
               </div>
             </div>
 

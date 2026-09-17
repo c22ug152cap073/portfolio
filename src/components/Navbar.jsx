@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Terminal, FileText } from 'lucide-react';
+import { GitHubIcon } from './Icons';
 import { soundManager } from '../utils/voiceEngine';
+import { portfolioData } from '../data/portfolioData';
 
 const navLinks = [
   { id: 'home', label: 'HOME' },
@@ -84,6 +86,16 @@ export const Navbar = ({ onOpenResume, onOpenTerminal }) => {
 
         {/* Utility buttons */}
         <div className="nav-actions">
+          <a
+            href={portfolioData.personal.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-action-btn"
+            title="GitHub (c22ug152cap073)"
+            aria-label="Visit GitHub profile c22ug152cap073"
+          >
+            <GitHubIcon size={16} />
+          </a>
           <button
             className="nav-action-btn"
             onClick={onOpenTerminal}
